@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import './Footer.scss';
 
 const Footer = () => {
-    // public 폴더 경로를 편하게 쓰기 위한 변수 설정
-    const imgPath = `${process.env.PUBLIC_URL}/images`;
+    // public/icons 등 외부 파일은 절대 경로로 접근
+    const imgPath = '/images';
 
     return (
         <footer className="footer-container Bk-Bk_solid">
