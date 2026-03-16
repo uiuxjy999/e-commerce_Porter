@@ -1,5 +1,5 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import Main from './pages/Main';
@@ -15,10 +15,21 @@ import MyPage from './pages/MyPage';
 import Board from './pages/Board';
 import NotFound from './pages/NotFound';
 
+function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, [pathname]);
+
+    return null;
+}
+
 function App() {
     return (
         <>
             <Header />
+            <ScrollToTop />
             <main className="main">
                 <Routes>
                     <Route path="/" element={<Main />} />
