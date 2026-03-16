@@ -41,7 +41,8 @@ const Footer = () => {
                 <div className="footer-col">
                     <h2 className="Wh-Wh_50">PORTER</h2>
                     <div className="sub-menu logo-menu">
-                        <Link to="/">
+                        
+                        <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                             <img src={`/images/porterlogo_w.png`} alt="PORTER" className="logo-1" />
                         </Link>
                         <Link to="/">
