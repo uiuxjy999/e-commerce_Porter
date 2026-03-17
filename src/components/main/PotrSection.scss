@@ -28,7 +28,7 @@
           width: 520px;
           height: 338px;
           overflow: hidden;
-          
+
           video {
             width: 100%;
             height: 100%;
@@ -96,7 +96,7 @@
             font-size: 16px;
             letter-spacing: -0.02em;
             color: #666666;
-            
+
             .line {
               width: 352px;
               height: 5px;
@@ -109,8 +109,8 @@
 
     /* 2. 스티키 텍스트 영역 */
     .sticky-container {
-      margin-top: 392px; 
-      position: relative;        
+      margin-top: 392px;
+      position: relative;
 
       .sticky-text {
         position: sticky;
@@ -162,11 +162,14 @@
           align-items: center;
         }
 
-        .box-top-left, .box-top-right, .box-bot-left {
+        .box-top-left,
+        .box-top-right,
+        .box-bot-left {
           width: 739px;
         }
-        
-        .box-top-left, .box-top-right {
+
+        .box-top-left,
+        .box-top-right {
           height: 850px;
         }
 

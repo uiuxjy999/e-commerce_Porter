@@ -1,173 +1,164 @@
-$bg-color: #ede58c;
-$text-color: #838e4f;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+$text-color: $main_txt_green;
 $container-width: 1920px;
 $side-margin: 60px;
 
-.porter-section {
-    background-color: $bg-color;
-    width: 100%;
-    overflow-x: hidden;
+.main-porter-section {
+    background-color: $main-bg-yellow;
+    // width: 100%;
+    overflow-x: clip;
     color: $text-color;
 
-    .porter-container {
-        max-width: $container-width;
+    .main-porter-container {
         margin: 0 auto;
-        padding: 100px $side-margin 200px;
+        padding: 160px 0;
         box-sizing: border-box;
     }
 
     // --- 상단 영역 ---
-    .header-content {
-        margin-bottom: 200px;
+    .main-porter-header-content {
+        padding-bottom: 300px;
 
-        .media-grid {
+        .main-porter-media-grid {
+            padding: 0 72px 0 124px;
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 60px;
+            align-items: flex-end;
 
-            .gif-box {
-                width: 250px;
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-            }
-            .video-box {
-                width: calc(100% - 350px);
-                max-width: 1100px;
-                video {
-                    width: 100%;
-                    display: block;
-                }
-            }
-        }
-
-        .brand-intro {
-            .brand-logo {
-                font-size: 10rem;
-                font-weight: 800;
-                letter-spacing: -4px;
-                margin: 0 0 30px 0;
-                line-height: 0.9;
-            }
-            .brand-text {
-                .main-desc {
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                    margin-bottom: 15px;
-                }
-                .sub-desc {
-                    font-size: 1.1rem;
-                    line-height: 1.8;
-                    opacity: 0.9;
-                }
-            }
-        }
-    }
-
-    // --- 스티키 영역 ---
-    .sticky-wrapper {
-        display: flex;
-        position: relative;
-        min-height: 2000px; // 스크롤 길이를 확보
-
-        .sticky-text-area {
-            width: 50%;
-            height: 100vh;
-            position: sticky;
-            top: 0;
-            display: flex;
-            align-items: center;
-
-            .sticky-inner {
-                .display-text {
-                    font-size: 5.5rem;
-                    line-height: 1.1;
-                    font-weight: 300;
-                    margin-bottom: 20px;
-                    .highlight {
-                        font-weight: 700;
-                    }
-                }
-                .caption {
-                    font-size: 1.2rem;
-                }
-            }
-        }
-
-        .product-list-grid {
-            width: 50%;
-            padding-top: 200px;
-            display: flex;
-            flex-direction: column;
-            gap: 300px; // 카드 간의 수직 간격
-
-            .product-card {
-                width: 100%;
+            .main-porter-left-box {
                 display: flex;
+                width: 460px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 223px;
 
-                &.box-top-left,
-                &.box-bot-left {
-                    justify-content: flex-start;
+                .main-porter-txt {
+                    color: $text-color;
                 }
-                &.box-top-right,
-                &.box-bot-right {
-                    justify-content: flex-end;
-                }
+            }
+        }
 
-                .img-bg {
-                    background-color: rgba(131, 142, 79, 0.1);
-                    padding: 60px;
-                    width: 80%;
-                    aspect-ratio: 1 / 1;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+        .main-porter-right-box {
+            width: calc(100% - 350px);
+            max-width: 1100px;
 
-                    img {
-                        max-width: 100%;
-                        height: auto;
-                        object-fit: contain;
-                    }
+            video {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .main-porter-brand-text {
+            margin-left: 124px;
+            width: 590px;
+
+            .main-porter-desc {
+                font-size: 30px;
+                font-weight: 500;
+                line-height: 130%;
+                letter-spacing: -0.6px;
+                margin-top: 40px;
+                margin-bottom: 20px;
+            }
+
+            .main-porter-sub-desc {
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 130%;
+                letter-spacing: -0.4px;
+                margin-bottom: 10px;
+            }
+
+            .main-porter-sub-desc-m {
+                font-family: 'Pretendard';
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 130%;
+                letter-spacing: -0.4px;
+            }
+
+            .view-more {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                margin-top: 20px;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-weight: 700;
+                font-size: 16px;
+                letter-spacing: -0.02em;
+
+                .line {
+                    width: 420px;
+                    height: 5px;
+                    background-color: $text-color;
                 }
             }
         }
     }
 
-    // --- 하단 영역 ---
-    .footer-visual {
-        margin-top: 100px;
+    /* 2. 스티키 텍스트 영역 */
+    .sticky-container {
+        margin-top: 150px;
+        position: relative;
+
+        .sticky-text {
+            position: sticky;
+            top: 50vh;
+            transform: translateY(-50%);
+            z-index: 10;
+            text-align: center;
+            cursor: default;
+
+            h2 {
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 160px;
+                line-height: 0.85;
+                letter-spacing: -0.04em;
+                margin: 0;
+                font-weight: 700;
+                cursor: default;
+
+                .thin {
+                    font-weight: 100;
+                }
+            }
+
+            p {
+                font-weight: 300;
+                font-size: 24px;
+                letter-spacing: -0.04em;
+                margin: 0;
+                margin-top: 20px;
+                cursor: default;
+            }
+        }
+
+        /* 3. 상품 리스트 */
+        .product-grid {
+            padding: 0 60px;
+            // margin-top: -92px;
+            padding-bottom: 670px;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 84px;
+        }
+    }
+
+    /* 4. 하단 Force 사진 영역 */
+    .bottom-content {
+        padding: 0 62px 0 126px;
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
 
-        .lifestyle-image {
-            width: 55%;
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        .illust-section {
-            width: 35%;
-            text-align: right;
-
-            .illust-image {
-                margin-bottom: 100px;
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-            }
-
-            .bottom-label {
-                font-size: 2.5rem;
-                font-weight: 900;
-                color: #000;
-                letter-spacing: 2px;
-            }
+        .bottom-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 374px;
         }
     }
 }
