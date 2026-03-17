@@ -81,20 +81,17 @@ const PorterSection = () => {
                                 className="main-porter-txt"
                             />
                         </div>
-                        <img
-                            src="https://placehold.co/979x720"
-                            alt="video_placeholder"
-                            width="979"
-                            height="720"
-                        />
-                        {/* 
+
+                        <div className="main-porter-right-box">
                             <video
-                            ref={videoRef}
-                            src="https://placeholde.co/979x720"
-                            muted
-                            loop={true}
-                            playsInline
-                            ></video> */}
+                                ref={videoRef}
+                                src="/videos/Main_PORTER.mp4"
+                                muted
+                                autoPlay // 자동 재생을 위해 추가
+                                loop={true}
+                                playsInline
+                            ></video>
+                        </div>
                     </div>
 
                     <div className="main-porter-brand-text">
