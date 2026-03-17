@@ -44,10 +44,6 @@ const PotrSection = () => {
 
   return (
     <section className="potr-section">
-      <div className="temp-space">
-        <p>상단 작업 영역 (임시 공간 1143px)</p>
-      </div>
-
       <div className="potr-content">
 
         {/* 상단 영역 */}
