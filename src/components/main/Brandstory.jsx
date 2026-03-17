@@ -11,11 +11,11 @@ const words = [
     'ACCORD',
     'BOOTH PACK',
     'ACCESSORIES',
-    'SMOKE',
+    'SMOKY',
     'INTERACTIVE',
     'YOSHIDA', // 처음 큰 슬롯에 보일 단어
     'PROTECTION',
-    'STAND ORIGINAL',
+    'ORIGINAL',
     'SCREEN',
     'UNLIMITED',
     'WONDER',
@@ -125,13 +125,15 @@ const BrandStory = () => {
                 </div>
 
                 <div className="brand-story__right">
-                    <h2 className="brand-story__title">장인의 손길로 완성한 본질</h2>
-                    <p className="brand-story__subtitle">: 가방 그 이상의 가치</p>
+                    <div className="brand-story__tit">
+                        <h2 className="brand-story__title">장인의 손길로 완성한 본질</h2>
+                        <p className="brand-story__subtitle">: 가방 그 이상의 가치</p>
+                    </div>
                     <p className="brand-story__body-ko">
                         현대적인 디자인에 뛰어난 기술력과 기능성, 사용하면 할수록 감탄을 더하게 하는
-                        내구성과 실용성을 모두 겸비한 가방 브랜드 'POTER(포터)'. 바늘 한 땀의 정성은
-                        시간이 흐를 수록 사용자의 삶에 깊숙이 스며들어, 단순한 소지품 그 이상의
-                        흔적과 신뢰를 남기는 인생의 반려 도구가 됩니다.
+                        <span>내구성과 실용성을 모두 겸비한 가방 브랜드 'PORTER(포터)'.</span> 바늘 한 땀의
+                        정성은 시간이 흐를 수록 사용자의 삶에 깊숙이 스며들어, 단순한 소지품 그
+                        이상의 흔적과 신뢰를 남기는 <span>인생의 반려 도구</span>가 됩니다.
                     </p>
                     <p className="brand-story__body-en">
                         Modern design, great technology, and functionality make it more impressive
@@ -147,7 +149,7 @@ const BrandStory = () => {
                     <div className="bs__bottom-left">
                         <img
                             src="/images/main/main_porter01.png"
-                            alt="Force"
+                            alt="porter_character"
                             width="460"
                             height="310"
                         />
