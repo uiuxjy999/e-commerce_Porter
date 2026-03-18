@@ -8,6 +8,7 @@ import PotrSection from '../../components/main/PotrSection';
 import LLSection from '../../components/main/LLSection';
 import './Main.scss';
 import PorterSection from '../../components/main/PorterSection';
+import MainAboutSection from '../../components/main/MainAboutSection';
 
 const Main = () => {
     // 새로고침 시 무조건 화면 맨 위에서 시작
@@ -30,6 +31,7 @@ const Main = () => {
                 <PorterSection />
                 <PotrSection />
                 <LLSection />
+                <MainAboutSection />
             </main>
         </>
     );
